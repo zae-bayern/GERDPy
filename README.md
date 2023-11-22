@@ -45,7 +45,8 @@ python3.7 guimain.py
 The GERPDPy GUI will then open and you can work there from now on.
 
 ####Example for Windows:
-Open cmd.exe by clicking on the Windows icon and just type 'cmd'. For navigating to a folder use the command 'cd'. 
+Open cmd.exe by clicking on the Windows icon and type 'cmd' for searching for 'cmd.exe'. For navigating to a folder in cmd use the command 'cd'.
+Alternatively, navigate to the folder in Windows Explorer, type 'cmd' in the address bar and press enter.
 
 To navigate one level up in your folders use:
 ```console
