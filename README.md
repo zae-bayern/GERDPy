@@ -58,8 +58,7 @@ cd folder\subfolder
 ```
 This is how your console might look: 
 
-![cmd_example](https://github.com/MeMaZAE/Modern_GUI_GerdPy/assets/77793428/d6aad9a5-4bd7-499c-a79f-3ba7905992cd)
+![cmd_example](https://github.com/zae-bayern/GERDPy/assets/77793428/1b69a326-45f2-42f9-9473-b5847eee3c7e)
 
 # Using GERDPy
 For detailed information about functionality and usage of the tool, please read **GERDPy_User Handbook.pdf**.
-
