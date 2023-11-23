@@ -18,6 +18,11 @@ The GUI is based on the PySide6 / PyQt6 interface **PyDracula** created by Wande
  For using GERDPy Simulation Tool, Python 3.7.9 must be used. If not installed, click the link below and install Python 3.7.9.
 > 🔗 https://www.python.org/downloads/release/python-379/
 
+You may check if Python is added to PATH variable on your System. Therefore click 'Start' and search for 'environment variables'.
+Then add the following paths to the PATH variable.
+> C:\Users\username\AppData\Local\Programs\Python\Python37\
+> C:\Users\username\AppData\Local\Programs\Python\Python37\Scripts
+
 # Required Packages
 For operating GERDPy correctly, some Python Packages are required. Therefore navigate to the folder, where GERDPy is located 
 and run the command below in your preferred console (e.g. cmd for Windows, Terminal for MacOS or Linux).

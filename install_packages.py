@@ -9,9 +9,9 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'scipy'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
-'PySide6'])
+'PySide6==6.2.3'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
-'PyQt6==6.2.0'])
+'PyQt6==6.2.3'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'CoolProp'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
