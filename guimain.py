@@ -23,8 +23,8 @@ import pandas as pd
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from GERDPySim._main import main as simulation
-from modules import *
-from widgets import *
+from modules import *   # subfolder
+from widgets import *   # subfolder
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 # SET AS GLOBAL WIDGETS
@@ -139,8 +139,8 @@ class MainWindow(QMainWindow):
         # GET START/STOP ICONS
         start_icon = QIcon()
         stop_icon = QIcon()
-        start_icon.addFile(u":/icons/images/icons/cil-media-play.png", QSize(), QIcon.Normal, QIcon.Off)
-        stop_icon.addFile(u":/icons/images/icons/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
+        start_icon.addFile(u":/images/icons/cil-media-play.png", QSize(), QIcon.Normal, QIcon.Off)
+        stop_icon.addFile(u":/images/icons/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
 
         # GET BUTTON CLICKED
         btn = self.sender()
@@ -239,7 +239,14 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon("ZAE.ico"))
-    window = MainWindow()
-    sys.exit(app.exec())
+    # Check if a QApplication already exists
+    app = QApplication.instance()
+    if app:
+        app.quit()
+    if not app:  # Create a new instance if one doesn't exist
+        app = QApplication(sys.argv)
+        app.setWindowIcon(QIcon("ZAE.ico"))
+        window = MainWindow()
+        sys.exit(app.exec_())
+    else:
+        print("App instance already running.")

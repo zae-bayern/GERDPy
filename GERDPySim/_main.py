@@ -12,10 +12,11 @@
     Authors: Yannick Apfel, Meike Martin
 """
 # import python libraries
-import sys
-import matplotlib.pyplot as plt
-import matplotlib.backends.backend_qtagg
+#import sys
+import matplotlib
 matplotlib.use('Qt5Agg')
+import matplotlib.pyplot as plt
+#import matplotlib.backends.backend_qtagg
 import time as tim
 import numpy as np
 import pandas as pd
@@ -24,8 +25,8 @@ from matplotlib.ticker import MaxNLocator
 from scipy.constants import pi
 
 # import GUI libraries
-from progress.vismain import SplashScreen
-from PySide6.QtWidgets import *
+from progress.vismain import SplashScreen    #in local dir!
+from PySide2.QtWidgets import *   # Pyside2 for Qt5
 
 # import GERDPySim modules
 import GERDPySim.boreholes as boreholes
@@ -34,9 +35,9 @@ import GERDPySim.heating_element as heating_element
 import GERDPySim.gfunction as gfunction
 import GERDPySim.load_aggregation as load_aggregation
 import GERDPySim.utilities as utilities
-from .load_generator import *
-from .R_th import *
-from .weather_data import get_weather_data
+from GERDPySim.load_generator import *
+from GERDPySim.R_th import *
+from GERDPySim.weather_data import get_weather_data
 
 
 def main(self):
