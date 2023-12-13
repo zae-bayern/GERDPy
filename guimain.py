@@ -242,7 +242,7 @@ if __name__ == "__main__":
     # Check if a QApplication already exists
     app = QApplication.instance()
     if app:
-        app.quit()
+        app.exit()
     if not app:  # Create a new instance if one doesn't exist
         app = QApplication(sys.argv)
         app.setWindowIcon(QIcon("ZAE.ico"))
