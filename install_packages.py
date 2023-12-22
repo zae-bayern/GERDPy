@@ -17,3 +17,5 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'pandas'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'openpyxl'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+'cython'])
