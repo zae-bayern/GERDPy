@@ -41,7 +41,7 @@ def compile_qrc(qrc_path, output_path):
     except subprocess.CalledProcessError as e:
         print(f"Error compiling resource file: {e}")
 
-compile_qrc("../resources.qrc", "resources_rc.py")
+compile_qrc("resources.qrc", "modules/resources_rc.py")
 
 # GUI FILE
 from .ui_main import Ui_MainWindow

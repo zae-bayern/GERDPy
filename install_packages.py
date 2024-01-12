@@ -19,5 +19,6 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'openpyxl'])
 
 #Optional (speed-up computations):
-subprocess.check_call([sys.executable, '-m', 'pip', 'install',
-'cython'])
+# Set 'use_cython' to True in GERDPySim/__init__.py to enable
+#subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+#'cython'])
