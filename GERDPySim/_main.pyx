@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# cython: language_level=3
 """ GERDPySim - '_main.py'
 
     Main Control-Module of GERDPySim - The Simulation Tool for Geothermal Heat Pipe Surface Heating Systems
@@ -11,36 +11,47 @@
 
     Authors: Yannick Apfel, Meike Martin
 """
-# import python libraries
-#import sys
+
+import numpy as np
+import pandas as pd
 import matplotlib
 matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
-#import matplotlib.backends.backend_qtagg
+from matplotlib.ticker import AutoMinorLocator, MaxNLocator
 import time as tim
-import numpy as np
-import pandas as pd
-from matplotlib.ticker import AutoMinorLocator
-from matplotlib.ticker import MaxNLocator
 from scipy.constants import pi
 
-# import GUI libraries
-from progress.vismain import SplashScreen    #in local dir!
-from PySide2.QtWidgets import *   # Pyside2 for Qt5
+# Import GUI libraries
+from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox
+from progress.vismain import SplashScreen
 
-# import GERDPySim modules
-import GERDPySim.boreholes as boreholes
-import GERDPySim.heatpipes as heatpipes
-import GERDPySim.heating_element as heating_element
-import GERDPySim.gfunction as gfunction
-import GERDPySim.load_aggregation as load_aggregation
-import GERDPySim.utilities as utilities
-from GERDPySim.load_generator import *
-from GERDPySim.R_th import *
-from GERDPySim.weather_data import get_weather_data
+cimport GERDPySim.boreholes as boreholes
+cimport GERDPySim.heatpipes as heatpipes
+cimport GERDPySim.heating_element as heating_element
+cimport GERDPySim.gfunction as gfunction
+cimport GERDPySim.load_aggregation as load_aggregation
+cimport GERDPySim.utilities as utilities
+from GERDPySim.load_generator cimport *
+from GERDPySim.R_th cimport *
+from GERDPySim.weather_data cimport get_weather_data
 
 
-def main(self):
+cpdef main(object self):
+    cdef double tic, toc
+    cdef int Nt, i
+    cdef double dt, tmax
+    cdef double z_asl, a_g, lambda_g, Theta_g
+    cdef double r_b, r_w, r_iso_b, r_pa, r_pi
+    cdef double lambda_b, lambda_iso, lambda_p
+    cdef double D_iso_conn, r_iso_conn, l_conn
+    cdef double A_he, x_min, lambda_c, s_R, l_p_he, D_he, D_iso_he
+    cdef double R_th, R_th_ghp
+    cdef np.ndarray u_inf, Theta_inf, S_r, B, Phi, RR, dates
+    cdef int fos
+    cdef np.ndarray Q, Q_N, Q_V, Theta_b, Theta_surf, m_w, m_s
+    cdef np.ndarray start_sb_vector, sb_active, sim_mod
+    cdef double R_f
+
     # -------------------------------------------------------------------------
     # 1.) Parametrization of the simulation (geometries, physical params, etc.)
     # -------------------------------------------------------------------------
@@ -515,8 +526,3 @@ def main(self):
                             'Snow heigth [mm]': m_s / (A_he * (997 / 1000))})
 
     return results
-
-#
-# # Main function
-# if __name__ == '__main__':
-#     main()

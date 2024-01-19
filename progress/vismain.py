@@ -1,10 +1,10 @@
-import sys
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+#import sys
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 # Import UI
-from .ui_splash_screen import Ui_SplashScreen
-from .widgets import CircularProgress
+from .ui_splash_screen import Ui_SplashScreen # is file in same dir
+from .widgets import CircularProgress # is subfolder
 
 
 # Splash screen
