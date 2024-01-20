@@ -75,4 +75,4 @@ Make sure cython is installed:
 pip install cython
 ```
 
-Then open the file 'GERDPySim/__init__.py' and on line 5 change 'use_cython = False' to 'use_cython = True' to activate.
+Then open the file 'GERDPySim/`__init__.py`' and on line 5 change 'use_cython = False' to 'use_cython = True' to activate.
