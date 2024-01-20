@@ -11,11 +11,12 @@ directly based on the open-source toolbox for the evaluation of thermal response
 fields, **Pygfunction** by Massimo Cimmino. 
 > 🔗 https://github.com/MassimoCimmino/pygfunction
 
-The GUI is based on the PySide6 / PyQt6 interface **PyDracula** created by Wanderson M. Pimenta.
+The GUI is based on the PySide / PyQt interface **PyDracula** created by Wanderson M. Pimenta.
 > 🔗 https://github.com/Wanderson-Magalhaes/Modern_GUI_PyDracula_PySide6_or_PyQt6
 
 # Python Version
- For using GERDPy Simulation Tool, Python 3.7.9 must be used. If not installed, click the link below and install Python 3.7.9.
+ For using GERDPy Simulation Tool, Python 3.7.9 or a higher version must be used. This document will assume Python 3.7.9 is used.
+ If not installed, click the link below and install Python 3.7.9.
 > 🔗 https://www.python.org/downloads/release/python-379/
 
 You may check if Python is added to PATH variable on your System. Therefore click 'Start' and search for 'environment variables'.
@@ -67,3 +68,11 @@ This is how your console might look:
 
 # Using GERDPy
 For detailed information about functionality and usage of the tool, please read **GERDPy_User Handbook.pdf**.
+
+# Optional: Activate cython support
+Make sure cython is installed:
+```console
+pip install cython
+```
+
+Then open the file 'GERDPySim/__init__.py' and on line 5 change 'use_cython = False' to 'use_cython = True' to activate.
