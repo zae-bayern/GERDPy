@@ -44,9 +44,18 @@ Inside your preferred console navigate to the folder, where GERDPy is located an
 ```console
 py -3.7 guimain.py
 ```
+or run the batch file
+```console
+.\GERDPy.bat
+```
+
 > ### **MacOS and Linux**:
 ```console
 python3.7 guimain.py 
+```
+or run the shell script
+```console
+./GERDPy.sh
 ```
 The GERPDPy GUI will then open and you can work there from now on.
 
