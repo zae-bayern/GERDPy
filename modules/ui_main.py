@@ -2777,7 +2777,7 @@ class Ui_MainWindow(object):
         self.cb_month.setCurrentText("")
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Day:", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"Simulation", None))
-        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>When pressing 'START SIMULATION', the simulation will be initialized. <br>This can take a few minutes.</p><p>After initialization, the simulation progress will be shown in a <br>seperate window.</p></body></html>", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>When pressing 'START SIMULATION', the simulation will be initialized. <br>This can take a few minutes.</p><p>After initialization, the simulation progress will be shown in a <br>separate window.</p></body></html>", None))
         self.btn_startsim.setText(QCoreApplication.translate("MainWindow", u" START SIMULATION", None))
         self.btn_save_results.setText(QCoreApplication.translate("MainWindow", u" SAVE RESULTS", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"Console", None))
