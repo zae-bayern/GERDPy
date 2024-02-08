@@ -3,8 +3,7 @@ setuptools~=47.1.0
 matplotlib~=3.5.3
 numpy~=1.21.5
 scipy~=1.7.3
-PySide6~=6.2.3
-PyQt6~=6.2.3
+PySide2
 CoolProp~=6.4.1
 pandas~=1.3.3
 openpyxl
